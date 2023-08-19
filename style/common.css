@@ -221,12 +221,20 @@ article table {
 }
 article table th > div {
   display: flex;
+  flex-direction: row;
   justify-content: center;
   align-items: baseline;
+}
+span.time {
+  display: block;
+  font-size: 0.95rem;
+  font-weight: 500;
+  margin-left: .3rem;
 }
 
 article table th i {
   margin-right: .1rem;
+  display: block;
 }
 
 article table th {
@@ -239,6 +247,10 @@ article table td {
 
 article table :is(th,td) {
   border: 1px grey solid;
+}
+footer {
+  display: flex;
+  justify-content: space-between;
 }
 footer p {
   margin-top: .3rem;
