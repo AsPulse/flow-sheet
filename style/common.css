@@ -10,7 +10,8 @@ body {
 
 article {
   width: 297mm;
-  height: 419mm
+  height: 419mm;
+  padding: 1.6rem;
 }
 
 @media screen {
@@ -18,4 +19,182 @@ article {
     box-shadow: 0 .5mm 2mm rgba(0,0,0,.3);
     margin: 1rem auto;
   }
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  margin: 0;
+  font-family: "FOT-TsukuGo Pro";
+  font-weight: 900;
+  font-size: 1rem;
+  line-height: 1rem;
+}
+
+
+/* Icons */
+i:is(.aff,.neg,.judge)::before {
+  font-family: "FOT-TsukuAMGothicS Std";
+  font-style: normal;
+  font-size: 1.2rem;
+  display: block;
+  line-height: 1.2rem;
+  width: 1.4rem;
+  text-align: center;
+  height: 1.4rem;
+  padding: 0.1rem;
+  border-radius: 3px;
+  margin: .2rem;
+}
+i.aff::before {
+  content: '肯';
+  background-color: rgb(50, 50, 50);
+  color: white;
+}
+i.neg::before {
+  content: '否';
+  background-color: rgb(240, 240, 240);
+  padding: calc(0.1rem - 1.5px);
+  border: 1.5px solid rgb(80, 80, 80);
+  color: black;
+}
+i.judge::before {
+  content: '審';
+  background-color: rgb(200, 200, 200);
+  color: black;
+}
+
+
+/* Header */
+header {
+  display: flex;
+  height: 5.2rem;
+}
+header div.split {
+  width: 2px;
+  height: 100%;
+  margin: 0 .5rem;
+  border-radius: 10px;
+  background-color: rgb(100, 100, 100);
+}
+
+header section.bracket {
+  position: relative;
+  padding-left: 2rem;
+  padding-right: 1.6rem;
+}
+header section.bracket::before, header section.bracket::after {
+  font-family: "Noto Sans JP";
+  position: absolute;
+  top: -.8rem;
+  font-size: 5.4rem;
+  font-weight: 200;
+  line-height: 5.4rem;
+  opacity: 0.5;
+}
+header section.bracket::before {
+  content: '{';
+  left: 0;
+}
+header section.bracket::after {
+  content: '}';
+  right: 0;
+}
+
+/* Header side */
+header .side {
+  display: inline-flex;
+  flex-direction: column;
+   background-image: linear-gradient(125deg, rgba(40, 40, 40, 1) 50%, rgba(0, 0, 0, 1) 50%);
+  color: white;
+  padding: .8rem 1rem;
+  border-radius: 3px;
+}
+header .side span.jp {
+  font-family: 'FOT-Gospel Std';
+  font-size: 2rem;
+  line-height: 2rem;
+}
+header .side span.en {
+  font-family: 'Madera W01';
+  margin-top: .2rem;
+  line-height: 1rem;
+  font-size: 1rem;
+  color: rgb(230, 230, 230);
+}
+
+/* Header Event */
+header section.meta {
+  margin: 0 .3rem;
+  width: 28rem;
+  display: flex;
+  flex-direction: column;
+}
+
+header section.meta .event {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 2px rgb(200, 200, 200) solid;
+  
+  padding-bottom: .4rem;
+  margin-bottom: .5rem;
+  color: rgb(60, 60, 60);
+}
+
+header section.meta .theme {
+  display: flex;
+  flex: 1;
+  align-items: flex-end;
+}
+
+header section.meta .theme .title {
+  font-size: 1.6rem;
+  line-height: 1.6rem;
+  margin: 0 .1rem;
+  writing-mode: vertical-rl;
+}
+
+/* header Participants */
+header section.participants {
+  width: 12rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+
+header section.info {
+  margin: 0 1rem;
+  display: flex;
+  flex-direction: column;
+}
+header section.info > div {
+  color: rgb(60, 60, 60);
+}
+header section.info > div:not(:last-child) {
+  padding-bottom: .4rem;
+  margin-bottom: .5rem;
+  border-bottom: 2px rgb(200, 200, 200) solid;
+}
+
+
+header section.page {
+  background-color: rgb(230, 230, 230);
+  border-radius: 5px;
+  width: 5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+}
+header section.page .split {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+  font-family: 'Noto Sans JP';
+  font-size: 1.3rem;
+  transform: skewX(-10deg);
+  color: rgb(100, 100, 100);
+}
+header section.page .unit {
+  margin-bottom: .8rem;
 }
