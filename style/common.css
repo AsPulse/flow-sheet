@@ -220,7 +220,7 @@ article table th {
   background-color: rgb(240, 240, 240);
 }
 article table td {
-  height: 88rem;
+  height: 89rem;
 }
 
 article table :is(th,td) {
