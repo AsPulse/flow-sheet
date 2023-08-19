@@ -198,3 +198,38 @@ header section.page .split {
 header section.page .unit {
   margin-bottom: .8rem;
 }
+
+/* Main */
+article table {
+  margin-top: 1rem;
+  width: 100%;
+  border-collapse: collapse;
+}
+article table th > div {
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+}
+
+article table th i {
+  margin-right: .3rem;
+}
+
+article table th {
+  height: 2.5rem;
+  background-color: rgb(240, 240, 240);
+}
+article table td {
+  height: 88rem;
+}
+
+article table :is(th,td) {
+  border: 1px grey solid;
+}
+footer p {
+  margin-top: .3rem;
+  font-size: .8rem;
+  color: rgb(100, 100, 100);
+  font-family: 'Noto Sans JP';
+  font-weight: 500;
+}
