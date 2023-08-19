@@ -31,7 +31,7 @@ h1, h2, h3, h4, h5, h6, p {
 
 
 /* Icons */
-i:is(.aff,.neg,.judge)::before {
+i:is(.aff,.neg,.aff-short,.neg-short)::before {
   font-family: "FOT-TsukuAMGothicS Std";
   font-style: normal;
   font-size: 1.2rem;
@@ -44,21 +44,35 @@ i:is(.aff,.neg,.judge)::before {
   border-radius: 3px;
   margin: .2rem;
 }
-i.aff::before {
+i:is(.aff, .neg)::before {
+  width: 3.8rem;
+  font-size: 1.1rem;
+  line-height: 1.1rem;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+i.aff-short::before {
   content: '肯';
   background-color: rgb(50, 50, 50);
   color: white;
 }
-i.neg::before {
+i.neg-short::before {
   content: '否';
   background-color: rgb(240, 240, 240);
   padding: calc(0.1rem - 1.5px);
   border: 1.5px solid rgb(80, 80, 80);
   color: black;
 }
-i.judge::before {
-  content: '審';
-  background-color: rgb(200, 200, 200);
+i.aff::before {
+  content: '肯定側';
+  background-color: rgb(50, 50, 50);
+  color: white;
+}
+i.neg::before {
+  content: '否定側';
+  background-color: rgb(240, 240, 240);
+  border: 1.5px solid rgb(80, 80, 80);
   color: black;
 }
 
@@ -212,7 +226,7 @@ article table th > div {
 }
 
 article table th i {
-  margin-right: .3rem;
+  margin-right: .1rem;
 }
 
 article table th {
